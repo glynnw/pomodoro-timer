@@ -1,0 +1,7 @@
+export const CHANGE_POMO_LENGTH = "change_pomo_length"
+export const CHANGE_BREAK_LENGTH = "change_break_length"
+export const START_TIMER = "start_timer"
+export const PAUSE_TIMER = "pause_timer"
+export const RESET_TIMER = "reset_timer"
+export const TIMER_EXPIRE = "timer_expire"
+export const TICK = "tick"
