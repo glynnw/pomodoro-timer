@@ -8,7 +8,6 @@ const initialState = {
   totalPomos: 0,
   elapsedTime: 0,
   timerLength: 25,
-  interval: null,
   isStarted: false,
 }
 
@@ -30,11 +29,10 @@ export default function reducer(state = initialState, action) {
       })
     case actionTypes.PAUSE_TIMER:
       return Object.assign({}, state, {
-        interval: null,
+        isStarted: false,
       })
     case actionTypes.RESET_TIMER:
       return Object.assign({}, state, {
-        interval: null,
         elapsedTime: 0,
         timerLength: state.isBreak ? state.breakLength: state.pomoLength,
         isStarted: false,
@@ -49,7 +47,6 @@ export default function reducer(state = initialState, action) {
     case actionTypes.TICK:
       return Object.assign({}, state, {
         elapsedTime: state.elapsedTime + 1,
-        interval: action.interval,
       })
     default:
       return state

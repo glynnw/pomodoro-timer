@@ -11,7 +11,7 @@ const actions = {
   pause: () =>
     ({ type: constants.PAUSE_TIMER }),
   reset: () => ({ type: constants.RESET_TIMER }),
-  tick: (interval, elapsedTime, timerLength) => ({ type: constants.TICK, interval }),
+  tick: () => ({ type: constants.TICK}),
   timerExpire: () => ({ type: constants.TIMER_EXPIRE }),
 }
 
